@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { GeoMapComponent } from './geo-map.component'
+import { LeafletMapComponent } from './leaflet-map.component'
 
 describe('GeoMapComponent', () => {
-  let component: GeoMapComponent
-  let fixture: ComponentFixture<GeoMapComponent>
+  let component: LeafletMapComponent
+  let fixture: ComponentFixture<LeafletMapComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [GeoMapComponent]
+      declarations: [LeafletMapComponent]
     }).compileComponents()
   })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GeoMapComponent)
+    fixture = TestBed.createComponent(LeafletMapComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

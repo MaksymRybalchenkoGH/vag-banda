@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core'
 import { icon, latLng, marker, tileLayer } from 'leaflet'
 
 @Component({
-  selector: 'app-geo-map',
-  templateUrl: './geo-map.component.html',
-  styleUrls: ['./geo-map.component.css']
+  selector: 'app-leaflet-map',
+  templateUrl: './leaflet-map.component.html',
+  styleUrls: ['./leaflet-map.component.css']
 })
-export class GeoMapComponent implements OnInit {
+export class LeafletMapComponent implements OnInit {
   readonly coordinates = {
     lat: 50.4174641,
     lng: 30.3702586

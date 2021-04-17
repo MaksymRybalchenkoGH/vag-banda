@@ -1,5 +1,6 @@
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
+import { AgmCoreModule } from '@agm/core'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -21,9 +22,11 @@ import { MatFormField } from '@angular/material/form-field'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ContactsComponent } from './pages/contacts/contacts.component'
 import { FooterComponent } from './components/footer/footer.component'
-import { GeoMapComponent } from './components/geo-map/geo-map.component'
+import { LeafletMapComponent } from './components/maps/leaflet-map/leaflet-map.component'
 import { LeafletModule } from '@asymmetrik/ngx-leaflet'
-import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component'
+import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component';
+import { GoogleMapComponent } from './components/maps/google-map/google-map.component';
+import { GeoMapComponent } from './components/maps/geo-map/geo-map.component'
 
 @NgModule({
   declarations: [
@@ -34,8 +37,10 @@ import { FeedbackFormComponent } from './components/feedback-form/feedback-form.
     ServicesComponent,
     ContactsComponent,
     FooterComponent,
-    GeoMapComponent,
-    FeedbackFormComponent
+    LeafletMapComponent,
+    FeedbackFormComponent,
+    GoogleMapComponent,
+    GeoMapComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +57,10 @@ import { FeedbackFormComponent } from './components/feedback-form/feedback-form.
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    LeafletModule
+    LeafletModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB7mSD4grd2xPs6_1OTfTmelxToZpDHW4c'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
