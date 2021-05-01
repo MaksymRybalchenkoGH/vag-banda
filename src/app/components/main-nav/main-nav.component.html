@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container>
   <mat-sidenav
     #drawer
     fixedInViewport
@@ -8,11 +8,15 @@
     [class.hidden]="!(isHandset$ | async)"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
   >
-    <mat-toolbar>Menu</mat-toolbar>
+    <h5 class="text-xl p-md">Меню</h5>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="appRoutes.home" (click)="drawer.toggle()">Главная</a>
-      <a mat-list-item [routerLink]="appRoutes.about" (click)="drawer.toggle()">0 нас</a>
-      <a mat-list-item [routerLink]="appRoutes.services" (click)="drawer.toggle()">Услуги</a>
+      <a *ngFor="let page of navigationMenu"
+         class="flex items-center p-md"
+         [routerLink]="['/']"
+         [fragment]="page.link"
+         [innerHTML]="page.innerHtml"
+         (click)="drawer.toggle()"
+      ></a>
       <mat-list-item>
         <div class="flex justify-around w-full">
           <a *ngFor="let soc of socials" [href]="soc.url" target="_blank" class="mr-md flex items-center last:mr-0">
@@ -23,7 +27,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="flex flex-col h-full">
+    <div class="flex flex-col">
       <mat-toolbar color="primary" role="heading" class="main-wrapper">
         <a [routerLink]="appRoutes.home" class="p-0">
           <img class="logo-img" src="/assets/img/vag-banda-logo.png" alt="bndservice logo" />
@@ -69,12 +73,15 @@
 
       <mat-toolbar *ngIf="!(isHandset$ | async)">
         <nav class="flex justify-around items-center w-full py-md">
-          <a mat-button color="primary" class="font-bold text-lg" [routerLink]="appRoutes.about">0 нас</a>
-          <a mat-button color="primary" class="font-bold text-lg" [routerLink]="appRoutes.services">Услуги</a>
-          <a mat-button color="primary" class="font-bold text-lg" [routerLink]="appRoutes.contacts">Контакты</a>
-          <a mat-button color="primary" class="font-bold text-lg" [routerLink]="appRoutes.home">
-            <img class="logo-img-menu" src="/assets/img/vag-banda-logo.png" alt="bndservice logo" />
-          </a>
+          <a
+            *ngFor="let page of navigationMenu"
+            mat-button
+            color="primary"
+            class="font-bold text-lg menu-item"
+            [routerLink]="'/'"
+            [fragment]="page.link"
+            [innerHTML]="page.innerHtml"
+          ></a>
         </nav>
       </mat-toolbar>
       <ng-content></ng-content>

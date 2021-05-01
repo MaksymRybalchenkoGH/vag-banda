@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router'
 import { AppRoutes } from './constants/app-routes'
-import { HomeComponent } from './pages/home/home.component'
-import { AboutComponent } from './pages/about/about.component'
-import { ServicesComponent } from './pages/services/services.component'
-import { ContactsComponent } from './pages/contacts/contacts.component'
+import { HomePageComponent } from './pages/home/home-page.component'
+import { AboutPageComponent } from './pages/about/about-page.component'
+import { ServicesPageComponent } from './pages/services/services-page.component'
+import { ContactsPageComponent } from './pages/contacts/contacts-page.component'
 
 const routes: Routes = [
   {
@@ -12,31 +12,35 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: AppRoutes.home,
+        redirectTo: AppRoutes.main,
         pathMatch: 'full'
       },
       {
+        path: AppRoutes.main,
+        component: HomePageComponent
+      },
+      {
         path: AppRoutes.home,
-        component: HomeComponent
+        component: HomePageComponent
       },
       {
         path: AppRoutes.about,
-        component: AboutComponent
+        component: AboutPageComponent
       },
       {
         path: AppRoutes.services,
-        component: ServicesComponent
+        component: ServicesPageComponent
       },
       {
         path: AppRoutes.contacts,
-        component: ContactsComponent
+        component: ContactsPageComponent
       }
     ]
   }
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

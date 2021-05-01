@@ -12,14 +12,14 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list'
-import { HomeComponent } from './pages/home/home.component'
-import { AboutComponent } from './pages/about/about.component'
-import { ServicesComponent } from './pages/services/services.component'
+import { HomePageComponent } from './pages/home/home-page.component'
+import { AboutPageComponent } from './pages/about/about-page.component'
+import { ServicesPageComponent } from './pages/services/services-page.component'
 import { MatCardModule } from '@angular/material/card'
 import { HttpClientModule } from '@angular/common/http'
 import { MatInputModule } from '@angular/material/input'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
-import { ContactsComponent } from './pages/contacts/contacts.component'
+import { ContactsPageComponent } from './pages/contacts/contacts-page.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { LeafletMapComponent } from './components/maps/leaflet-map/leaflet-map.component'
 import { LeafletModule } from '@asymmetrik/ngx-leaflet'
@@ -32,10 +32,10 @@ import {GOOGLE_API_KEY} from './constants/public-api'
   declarations: [
     AppComponent,
     MainNavComponent,
-    HomeComponent,
-    AboutComponent,
-    ServicesComponent,
-    ContactsComponent,
+    HomePageComponent,
+    AboutPageComponent,
+    ServicesPageComponent,
+    ContactsPageComponent,
     FooterComponent,
     LeafletMapComponent,
     FeedbackFormComponent,

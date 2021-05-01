@@ -1,6 +1,8 @@
 export enum AppRoutes {
+  main = 'main',
   home = 'home',
   about = 'about',
   services = 'services',
-  contacts = 'contacts'
+  contacts = 'contacts',
+  banda = 'banda'
 }

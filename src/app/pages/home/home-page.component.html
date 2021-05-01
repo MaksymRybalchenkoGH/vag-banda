@@ -1,0 +1,20 @@
+<article class="main-wrapper home-wrapper flex flex-col md:flex-row md:justify-between items-center md:items-start py-xl">
+  <div class="mb-xl">
+    <h1 class="text-2xl md:text-3xl font-bold text-primary text-center title">
+      Профессиональный сервис и обслуживание автомобилей
+    </h1>
+  </div>
+  <div class="feedback-block">
+    <app-feedback-form></app-feedback-form>
+  </div>
+</article>
+<div [attr.id]="appRoutes.about" style="background:#79a7cf; min-height: 400px;">
+  <app-about-page></app-about-page>
+</div>
+<div [attr.id]="appRoutes.contacts" style="background: #c37d7d; min-height: 400px;">
+  <app-contacts-page></app-contacts-page>
+</div>
+<div [attr.id]="appRoutes.services" style="background:#d7c695; min-height: 400px;">
+  <app-services-page></app-services-page>
+</div>
+

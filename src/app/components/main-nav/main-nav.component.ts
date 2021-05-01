@@ -1,9 +1,10 @@
-import { Component } from '@angular/core'
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
-import { Observable } from 'rxjs'
-import { map, shareReplay } from 'rxjs/operators'
-import { AppRoutes } from '../../constants/app-routes'
-import { Contacts } from '../../constants/contacts'
+import {Component} from '@angular/core'
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout'
+import {Observable} from 'rxjs'
+import {map, shareReplay} from 'rxjs/operators'
+import {AppRoutes} from '../../constants/app-routes'
+import {Contacts} from '../../constants/contacts'
+import {NavigationMenu} from '../../constants/navigation-menu'
 
 @Component({
   selector: 'app-main-nav',
@@ -17,6 +18,8 @@ export class MainNavComponent {
   public readonly geoLocationUrl = Contacts.geoLocationUrl
 
   public readonly socials = Contacts.socials
+
+  public readonly navigationMenu = NavigationMenu
 
   public isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(result => result.matches),
