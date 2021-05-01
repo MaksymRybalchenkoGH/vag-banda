@@ -23,6 +23,12 @@
   height: auto !important;
   font-size: 30px;
 }
-.menu-item img {
-  height: 40px;
+
+.fixed-header {
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  position: fixed !important;
+  z-index: 999 !important;
+
 }

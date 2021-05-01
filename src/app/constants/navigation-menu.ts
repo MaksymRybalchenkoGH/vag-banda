@@ -1,7 +1,7 @@
 import {NavigationMenuItem} from '../models/navigation-menu-item'
 import {AppRoutes as AppRoute} from './app-routes'
 
-
+export const NavigationHeaderHeight = 64
 export const  NavigationMenu: NavigationMenuItem[] = [
   {
     innerHtml: 'Главная',

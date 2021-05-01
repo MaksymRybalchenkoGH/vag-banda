@@ -4,7 +4,7 @@ import {Observable} from 'rxjs'
 import {map, shareReplay} from 'rxjs/operators'
 import {AppRoutes} from '../../constants/app-routes'
 import {Contacts} from '../../constants/contacts'
-import {NavigationMenu} from '../../constants/navigation-menu'
+import {NavigationHeaderHeight, NavigationMenu} from '../../constants/navigation-menu'
 
 @Component({
   selector: 'app-main-nav',
@@ -12,14 +12,14 @@ import {NavigationMenu} from '../../constants/navigation-menu'
   styleUrls: ['./main-nav.component.css']
 })
 export class MainNavComponent {
+  public readonly HeaderHeight = NavigationHeaderHeight
+  public readonly navigationMenu = NavigationMenu
   public readonly appRoutes = AppRoutes
   public readonly geoLocationAddress = Contacts.geoLocationAddress
   public readonly geoLocationDistrict = Contacts.geoLocationDistrict
   public readonly geoLocationUrl = Contacts.geoLocationUrl
 
   public readonly socials = Contacts.socials
-
-  public readonly navigationMenu = NavigationMenu
 
   public isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(result => result.matches),

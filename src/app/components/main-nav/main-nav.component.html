@@ -27,64 +27,63 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="flex flex-col">
-      <mat-toolbar color="primary" role="heading" class="main-wrapper">
-        <a [routerLink]="appRoutes.home" class="p-0">
-          <img class="logo-img" src="/assets/img/vag-banda-logo.png" alt="bndservice logo" />
-        </a>
+    <mat-toolbar color="primary" role="heading" class="main-wrapper fixed-header" [style.height.px]="HeaderHeight">
+      <a [routerLink]="appRoutes.home" class="p-0">
+        <img class="logo-img" src="/assets/img/vag-banda-logo.png" alt="bndservice logo" />
+      </a>
 
-        <span style="flex: 1 1 auto"></span>
+      <span style="flex: 1 1 auto"></span>
 
-        <div class="flex mr-lg">
-          <a [href]="geoLocationUrl" class="flex text-yellow text-sm mr-lg" target="_blank">
+      <div class="flex mr-lg">
+        <a [href]="geoLocationUrl" class="flex text-yellow text-sm mr-lg" target="_blank">
             <span class="mr-md flex items-center">
               <mat-icon class="text-icon" aria-label="map-location">location_on</mat-icon>
             </span>
 
-            <span class="flex flex-col" *ngIf="!(isHandset$ | async)">
+          <span class="flex flex-col" *ngIf="!(isHandset$ | async)">
               <span>{{ geoLocationAddress }}</span>
               <span>{{ geoLocationDistrict }}</span>
             </span>
-          </a>
+        </a>
 
-          <a href="tel:+380731104101" class="flex items-center text-accent text-sm">
+        <a href="tel:+380731104101" class="flex items-center text-accent text-sm">
             <span class="mr-md flex items-center">
               <mat-icon class="text-icon" aria-label="phone call">call</mat-icon>
             </span>
-            <span *ngIf="!(isHandset$ | async)">+380731104101</span>
-          </a>
-        </div>
-        <div class="flex" *ngIf="!(isHandset$ | async)">
-          <a *ngFor="let soc of socials" [href]="soc.url" target="_blank" class="mr-md flex items-center last:mr-0">
-            <mat-icon [svgIcon]="soc.icon" class="text-accent" aria-label="social link"></mat-icon>
-          </a>
-        </div>
+          <span *ngIf="!(isHandset$ | async)">+380731104101</span>
+        </a>
+      </div>
+      <div class="flex" *ngIf="!(isHandset$ | async)">
+        <a *ngFor="let soc of socials" [href]="soc.url" target="_blank" class="mr-md flex items-center last:mr-0">
+          <mat-icon [svgIcon]="soc.icon" class="text-accent" aria-label="social link"></mat-icon>
+        </a>
+      </div>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+    </mat-toolbar>
 
-        <button
-          type="button"
-          aria-label="Toggle sidenav"
-          mat-icon-button
-          (click)="drawer.toggle()"
-          *ngIf="isHandset$ | async"
-        >
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button>
-      </mat-toolbar>
 
-      <mat-toolbar *ngIf="!(isHandset$ | async)">
-        <nav class="flex justify-around items-center w-full py-md">
-          <a
-            *ngFor="let page of navigationMenu"
-            mat-button
-            color="primary"
-            class="font-bold text-lg menu-item"
-            [routerLink]="'/'"
-            [fragment]="page.link"
-            [innerHTML]="page.innerHtml"
-          ></a>
-        </nav>
-      </mat-toolbar>
-      <ng-content></ng-content>
-    </div>
+    <div [style.margin-top.px]="HeaderHeight"></div>
+    <mat-toolbar *ngIf="!(isHandset$ | async)">
+      <nav class="flex justify-around items-center w-full py-md">
+        <a
+          *ngFor="let page of navigationMenu"
+          mat-button
+          color="primary"
+          class="font-bold text-lg menu-item"
+          [routerLink]="'/'"
+          [fragment]="page.link"
+          [innerHTML]="page.innerHtml"
+        ></a>
+      </nav>
+    </mat-toolbar>
+    <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -5,6 +5,7 @@ import { HomePageComponent } from './pages/home/home-page.component'
 import { AboutPageComponent } from './pages/about/about-page.component'
 import { ServicesPageComponent } from './pages/services/services-page.component'
 import { ContactsPageComponent } from './pages/contacts/contacts-page.component'
+import {NavigationHeaderHeight} from './constants/navigation-menu'
 
 const routes: Routes = [
   {
@@ -40,7 +41,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled'})],
+  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', scrollOffset: [0, NavigationHeaderHeight]})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
