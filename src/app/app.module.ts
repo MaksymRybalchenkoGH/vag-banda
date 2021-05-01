@@ -18,15 +18,15 @@ import { ServicesComponent } from './pages/services/services.component'
 import { MatCardModule } from '@angular/material/card'
 import { HttpClientModule } from '@angular/common/http'
 import { MatInputModule } from '@angular/material/input'
-import { MatFormField } from '@angular/material/form-field'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ContactsComponent } from './pages/contacts/contacts.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { LeafletMapComponent } from './components/maps/leaflet-map/leaflet-map.component'
 import { LeafletModule } from '@asymmetrik/ngx-leaflet'
-import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component';
-import { GoogleMapComponent } from './components/maps/google-map/google-map.component';
+import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component'
+import { GoogleMapComponent } from './components/maps/google-map/google-map.component'
 import { GeoMapComponent } from './components/maps/geo-map/geo-map.component'
+import {GOOGLE_API_KEY} from './constants/public-api'
 
 @NgModule({
   declarations: [
@@ -59,7 +59,7 @@ import { GeoMapComponent } from './components/maps/geo-map/geo-map.component'
     ReactiveFormsModule,
     LeafletModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB7mSD4grd2xPs6_1OTfTmelxToZpDHW4c'
+      apiKey: GOOGLE_API_KEY
     })
   ],
   providers: [],
