@@ -3,6 +3,11 @@
   background-size: cover;
   width: 100%;
 }
+.title-border {
+  @apply border-green;
+  @apply rounded-sm;
+  @apply py-md;
+}
 .shadow-background {
   background: #000000;
   opacity: .7;

@@ -4,21 +4,21 @@
   </a>
 
   <div class="flex flex-col items-center justify-center mb-lg md:items-start md:mr-lg md:mb-0">
-    <a [href]="contacts.geoLocationUrl" class="flex text-yellow text-sm mb-lg" target="_blank">
+    <a [href]="contacts.geoLocationUrl" class="flex text-white text-sm mb-lg" target="_blank">
       <span class="mr-md flex items-center">
         <mat-icon class="text-icon" aria-label="map-location">location_on</mat-icon>
       </span>
       <span>{{ contacts.geoLocationAddress }}, {{ contacts.geoLocationDistrict }}</span>
     </a>
 
-    <a href="tel:+380731104101" class="flex items-center text-accent text-sm mb-lg">
+    <a href="tel:+380731104101" class="flex items-center text-white text-sm mb-lg">
       <span class="mr-md flex items-center">
         <mat-icon class="text-icon" aria-label="phone call">call</mat-icon>
       </span>
       <span>+380731104101</span>
     </a>
 
-    <a [href]="'mailto:' + contacts.mail" class="flex items-center text-accent text-sm">
+    <a [href]="'mailto:' + contacts.mail" class="flex items-center text-white text-sm">
       <span class="mr-md flex items-center">
         <mat-icon class="text-icon" aria-label="send e-mail">mail</mat-icon>
       </span>
@@ -28,7 +28,7 @@
 
   <div class="flex items-center justify-center mb-lg md:mb-0">
     <a *ngFor="let soc of contacts.socials" [href]="soc.url" target="_blank" class="mr-md last:mr-0 flex items-center">
-      <mat-icon [svgIcon]="soc.icon" class="social-icon text-accent" aria-label="social link"></mat-icon>
+      <mat-icon [svgIcon]="soc.icon" class="social-icon text-white" aria-label="social link"></mat-icon>
     </a>
   </div>
 </footer>

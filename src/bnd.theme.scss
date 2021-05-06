@@ -8,20 +8,20 @@
 //Темно-синий 313c53
 //
 $bnd-deep-blue: (
-  50: #5c667f,
-  100: #5c667f,
-  200: #5c667f,
-  300: #5c667f,
-  400: #313c53,
-  500: #313c53,
-  600: #313c53,
-  700: #313c53,
-  800: #08162a,
-  900: #08162a,
-  A100: #657ba4,
-  A200: #313c53,
-  A400: #313c53,
-  A700: #08162a,
+  50: #777c8d,
+  100: #777c8d,
+  200: #777c8d,
+  300: #777c8d,
+  400: #40434e,
+  500: #40434e,
+  600: #40434e,
+  700: #40434e,
+  800: #232836,
+  900: #232836,
+  A100: #777c8d,
+  A200: #40434e,
+  A400: #40434e,
+  A700: #232836,
   contrast: (
     50: #ffffff,
     100: white,
@@ -40,21 +40,21 @@ $bnd-deep-blue: (
   )
 );
 
-$bnd-yellow: (
-  50: #ffff79,
-  100: #ffff79,
-  200: #ffff79,
-  300: #ffff79,
-  400: #fff343,
-  500: #fff343,
-  600: #fff343,
-  700: #fff343,
-  800: #c8c100,
-  900: #c8c100,
-  A100: #ffff79,
-  A200: #fff343,
-  A400: #fff343,
-  A700: #c8c100,
+$bnd-green: (
+  50: #97ae3c,
+  100: #97ae3c,
+  200: #97ae3c,
+  300: #97ae3c,
+  400: #668000,
+  500: #668000,
+  600: #668000,
+  700: #668000,
+  800: #385300,
+  900: #385300,
+  A100: #97ae3c,
+  A200: #668000,
+  A400: #668000,
+  A700: #385300,
   contrast: (
     50: #ffffff,
     100: white,
@@ -104,9 +104,9 @@ $bnd-red: (
     A700: #ffffff
   )
 );
-
+//668000
 $bnd-primary: mat-palette($bnd-deep-blue, 600, 100, 700, 400);
-$bnd-accent: mat-palette($bnd-yellow, 400, 100, 700, 400);
+$bnd-accent: mat-palette($bnd-green, 400, 100, 700, 400);
 $bnd-warn: mat-palette($bnd-red, 500);
 
 $bnd-theme: mat-light-theme(
@@ -114,7 +114,7 @@ $bnd-theme: mat-light-theme(
     color: (
       primary: $bnd-primary,
       accent: $bnd-accent,
-      warn: $bnd-warn
+      warn: $bnd-warn,
     )
   )
 );

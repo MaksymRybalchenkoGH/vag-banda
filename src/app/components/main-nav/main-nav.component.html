@@ -35,7 +35,7 @@
       <span style="flex: 1 1 auto"></span>
 
       <div class="flex mr-lg">
-        <a [href]="geoLocationUrl" class="flex text-yellow text-sm mr-lg" target="_blank">
+        <a [href]="geoLocationUrl" class="flex text-white text-sm mr-lg" target="_blank">
             <span class="mr-md flex items-center">
               <mat-icon class="text-icon" aria-label="map-location">location_on</mat-icon>
             </span>
@@ -46,7 +46,7 @@
             </span>
         </a>
 
-        <a href="tel:+380731104101" class="flex items-center text-accent text-sm">
+        <a href="tel:+380731104101" class="flex items-center text-white text-sm">
             <span class="mr-md flex items-center">
               <mat-icon class="text-icon" aria-label="phone call">call</mat-icon>
             </span>
@@ -55,7 +55,7 @@
       </div>
       <div class="flex" *ngIf="!(isHandset$ | async)">
         <a *ngFor="let soc of socials" [href]="soc.url" target="_blank" class="mr-md flex items-center last:mr-0">
-          <mat-icon [svgIcon]="soc.icon" class="text-accent" aria-label="social link"></mat-icon>
+          <mat-icon [svgIcon]="soc.icon" class="text-white" aria-label="social link"></mat-icon>
         </a>
       </div>
       <button

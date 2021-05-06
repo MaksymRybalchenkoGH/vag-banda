@@ -22,14 +22,14 @@ module.exports = {
         transparent: 'transparent',
         current: 'currentColor',
         indigo: {
-          light: '#5c667f',
-          DEFAULT: '#313c53',
-          dark: '#08162a',
+          light: '#777c8d',
+          DEFAULT: '#40434e',
+          dark: '#232836',
         },
-        yellow: {
-          light: '#ffff79',
-          DEFAULT: '#fff343',
-          dark: '#c8c100',
+        green: {
+          light: '#97ae3c',
+          DEFAULT: '#668000',
+          dark: '#385300',
         }
       }
     },

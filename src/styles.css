@@ -11,27 +11,31 @@ html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
-}
-.main-wrapper {
-  @apply px-md !important;
-}
-
-@media only screen and (min-width: theme('screens.md')) {
-  .main-wrapper {
-    @apply px-xl !important;
-  }
 }
 
 .text-primary {
   @apply text-indigo;
 }
 .text-accent {
-  @apply text-yellow;
+  @apply text-green;
 }
 
+.main-wrapper {
+  @apply px-md !important;
+}
+
+/* MD and higher */
+@media only screen and (min-width: theme('screens.md')) {
+  .main-wrapper {
+    @apply px-xl !important;
+  }
+}
+
+/* exclusions */
 .mat-focused .mat-form-field-required-marker {
   color: #f44336;
 }
