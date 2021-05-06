@@ -1,7 +1,12 @@
-import {NavigationMenuItem} from '../models/navigation-menu-item'
-import {AppRoutes as AppRoute} from './app-routes'
+import {AppRoutes, AppRoutes as AppRoute} from './app-routes'
 
 export const NavigationHeaderHeight = 64
+
+export interface NavigationMenuItem {
+  innerHtml: string
+  link: AppRoutes | string
+}
+
 export const  NavigationMenu: NavigationMenuItem[] = [
   {
     innerHtml: 'Главная',

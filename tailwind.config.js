@@ -17,6 +17,7 @@ module.exports = {
         md: '10px',
         lg: '20px',
         xl: '40px',
+        '2xl': '80px'
       },
       colors: {
         transparent: 'transparent',

@@ -1,3 +1,13 @@
-<article class="m-lg">
-  <h1 class="text-primary text-center">About us content</h1>
+<article class="mx-lg my-xl">
+  <h1 class="text-primary text-center font-bold text-2xl md:text-3xl mb-xl">Зачем выбирать специализировнаый<br>BANDA SERVICE?</h1>
+  <div class="relative vehicle">
+    <div class="vehicle-border"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-16 lg:gap-x-80">
+      <div *ngFor="let vehicle of vehicles" class="flex flex-col items-center text-center mb-md px-md">
+        <img src="assets/vehicle/{{vehicle.type}}.jpeg" [alt]="vehicle.type" class="mb-md">
+        <h3 class="mb-md text-xl font-bold">{{vehicle.title}}</h3>
+        <p class="text-gray-500">{{vehicle.description}}</p>
+      </div>
+    </div>
+  </div>
 </article>

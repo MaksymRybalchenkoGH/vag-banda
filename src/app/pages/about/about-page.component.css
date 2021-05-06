@@ -1,4 +1,20 @@
-.example-card {
-  width: 300px;
-  padding: 20px;
+
+@media only screen and (min-width: theme('screens.lg')) {
+  .vehicle {
+    background: url("src/assets/vehicle/vehicle.jpeg") no-repeat center center;
+    padding: 20px 0;
+  }
+  .vehicle-border {
+    @apply border-green;
+    @apply rounded-sm;
+    @apply border-4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 444px;
+    height: 666px;
+    opacity: .25;
+    z-index: -1;
+  }
 }
