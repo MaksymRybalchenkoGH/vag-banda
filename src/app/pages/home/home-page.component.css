@@ -1,5 +1,5 @@
 .home-wrapper {
-  background: url("../../../assets/img/template-home.jpg") center;
+  background: url("src/assets/img/home-template.jpeg") center;
   background-size: cover;
   width: 100%;
 }

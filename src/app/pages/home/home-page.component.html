@@ -11,17 +11,18 @@
       </div>
     </div>
     <div class="w-full" [style.maxWidth.px]="400">
-      <app-feedback-form class="opacity-90 block"></app-feedback-form>
+      <app-feedback-form class="opacity-95 block"></app-feedback-form>
     </div>
   </div>
 </article>
+<div [attr.id]="appRoutes.services">
+  <app-services-page></app-services-page>
+</div>
 <div [attr.id]="appRoutes.about">
   <app-about-page></app-about-page>
 </div>
 <div [attr.id]="appRoutes.contacts" style="background: #c37d7d; min-height: 400px;">
   <app-contacts-page></app-contacts-page>
 </div>
-<div [attr.id]="appRoutes.services" style="background:#d7c695; min-height: 400px;">
-  <app-services-page></app-services-page>
-</div>
+
 

@@ -39,3 +39,6 @@ body {
 .mat-focused .mat-form-field-required-marker {
   color: #f44336;
 }
+.mat-drawer-container {
+  background: #ffffff;
+}
