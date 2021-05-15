@@ -19,12 +19,31 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
   <div
     *ngFor="let service of services"
-    [style.background-image]="'url(' + service.img + ')'"
-    class="relative flex flex-col justify-center items-center mb-md pt-2xl service-card"
   >
-    <div class="shadow-overlay"></div>
-    <div class="z-10">
-      <h3 class="text-white text-2xl font-bold text-center">{{service.title}}</h3>
-    </div>
+    <app-flip-card class="block" [style.height.px]="CardHeight">
+      <div front
+           [style.background-image]="'url(' + service.img + ')'"
+           [style.height.px]="CardHeight"
+           class="relative flex flex-col justify-center items-center service-card mb-md pt-2xl"
+      >
+        <div class="shadow-overlay"></div>
+        <div class="z-10">
+          <h3 class="text-white text-2xl font-bold text-center">{{service.title}}</h3>
+        </div>
+
+      </div>
+
+      <div back
+           [style.background-image]="'url(' + service.img + ')'"
+           [style.height.px]="CardHeight"
+           class="relative flex flex-col justify-center items-center service-card mb-md pt-2xl"
+      >
+        <div class="hover-overlay"></div>
+        <div class="z-10">
+          <h3 class="text-white text-2xl font-bold text-center">{{service.title}}</h3>
+        </div>
+      </div>
+    </app-flip-card>
+
   </div>
 </div>

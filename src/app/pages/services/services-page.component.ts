@@ -10,6 +10,7 @@ interface CatalogService {
   styleUrls: ['./services-page.component.css']
 })
 export class ServicesPageComponent implements OnInit {
+  public readonly CardHeight = 421
   public readonly services: CatalogService[] = [
     {
       title: 'Комплексная диагносткиа автомобиля',
