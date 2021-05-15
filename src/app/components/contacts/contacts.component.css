@@ -1,7 +1,7 @@
 .large-icon {
-  font-size: 30px;
-  width: 30px;
-  height: 30px;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
 }
 .contact-wrapper {
   box-shadow: 0 3px 1px -3px #dbdbdb;
@@ -27,8 +27,8 @@
     @apply pl-lg;
   }
   .large-icon {
-    font-size: 24px;
-    width: 24px;
-    height: 24px;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
   }
 }
