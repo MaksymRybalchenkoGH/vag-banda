@@ -1,11 +1,33 @@
 import { Component, OnInit } from '@angular/core'
 
+interface CatalogService {
+  title: string
+  img: string
+}
 @Component({
   selector: 'app-services-page',
   templateUrl: './services-page.component.html',
   styleUrls: ['./services-page.component.css']
 })
 export class ServicesPageComponent implements OnInit {
+  public readonly services: CatalogService[] = [
+    {
+      title: 'Комплексная диагносткиа автомобиля',
+      img: 'assets/services/services-diagnostic.jpeg'
+    },
+    {
+      title: 'Электроника, прошивка, доп. оборудование',
+      img: 'assets/services/services-equipment.jpeg'
+    },
+    {
+      title: 'Ремонт двигателя',
+      img: 'assets/services/services-engine.jpeg'
+    },
+    {
+      title: 'Ремонт ходовой',
+      img: 'assets/services/services-chassis.jpeg'
+    },
+  ]
   constructor() {}
 
   ngOnInit(): void {}

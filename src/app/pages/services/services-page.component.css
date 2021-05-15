@@ -2,7 +2,23 @@
   background: none;
   min-height: 333px;
 }
+.service-card {
+  min-height: 421px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.shadow-overlay {
+  @apply bg-indigo-dark;
+  opacity: 0.8;
 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
 @media only screen and (min-width: theme('screens.md')) {
   .block-wrapper {
     background: url("src/assets/img/services-template.jpeg") right center no-repeat;
