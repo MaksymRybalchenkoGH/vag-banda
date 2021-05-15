@@ -15,5 +15,5 @@ export const list = [
     image: '',
     isPopular: '',
     category: ''
-  },
+  }
 ]

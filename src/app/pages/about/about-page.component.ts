@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import {VehiclePartsList} from '../../data/vehicle-part'
+import { VehiclePartsList } from '../../data/vehicle-part'
 
 @Component({
   selector: 'app-about-page',

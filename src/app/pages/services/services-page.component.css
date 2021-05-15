@@ -31,7 +31,7 @@
 }
 @media only screen and (min-width: theme('screens.md')) {
   .block-wrapper {
-    background: url("src/assets/img/services-template.jpeg") right center no-repeat;
+    background: url('src/assets/img/services-template.jpeg') right center no-repeat;
     background-size: 100%;
   }
 }

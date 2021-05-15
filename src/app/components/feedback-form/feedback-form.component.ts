@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
-import {FormControl, FormGroup, Validators} from '@angular/forms'
+import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { PublicApiService } from '../../services/public-api.service'
 import { BehaviorSubject, Observable, Subject } from 'rxjs'
 import { debounceTime, filter, takeUntil, throttleTime } from 'rxjs/operators'
-import {FeedbackMessageState} from '../../models/feedback-message-state'
+import { FeedbackMessageState } from '../../models/feedback-message-state'
 
 @Component({
   selector: 'app-feedback-form',
@@ -22,7 +22,9 @@ export class FeedbackFormComponent implements OnInit, OnDestroy {
     success: false,
     text: this.initMessageTemplate
   }
-  private statusMessage: BehaviorSubject<FeedbackMessageState> = new BehaviorSubject<FeedbackMessageState>(this.defaultStatusMessage)
+  private statusMessage: BehaviorSubject<FeedbackMessageState> = new BehaviorSubject<FeedbackMessageState>(
+    this.defaultStatusMessage
+  )
   public statusMessage$: Observable<FeedbackMessageState> = this.statusMessage.asObservable()
 
   private destroy$ = new Subject()
@@ -57,7 +59,7 @@ export class FeedbackFormComponent implements OnInit, OnDestroy {
   }
 
   private successState(): void {
-    if(this.feedbackForm.invalid) {
+    if (this.feedbackForm.invalid) {
       return
     }
     const state: FeedbackMessageState = {
@@ -94,5 +96,4 @@ export class FeedbackFormComponent implements OnInit, OnDestroy {
       text: this.initMessageTemplate
     })
   }
-
 }

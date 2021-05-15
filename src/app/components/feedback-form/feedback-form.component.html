@@ -1,10 +1,15 @@
-<aside class="flex flex-col items-center justify-between p-lg rounded bg-white" *ngIf="statusMessage$ | async as status">
+<aside
+  class="flex flex-col items-center justify-between p-lg rounded bg-white"
+  *ngIf="statusMessage$ | async as status"
+>
   <h3 class="text-xl text-center mb-md" [class.mat-error]="!status.success && status.done">
-    {{status.text}}
+    {{ status.text }}
   </h3>
   <ng-container *ngIf="status.success">
-    <mat-icon aria-label="success" class="text-green-400 text-6xl mb-lg" >check_circle_outline</mat-icon>
-    <button mat-raised-button color="primary" type="button" class="w-full" (click)="restoreStatus()">Написать еще раз</button>
+    <mat-icon aria-label="success" class="text-green-400 text-6xl mb-lg">check_circle_outline</mat-icon>
+    <button mat-raised-button color="primary" type="button" class="w-full" (click)="restoreStatus()">
+      Написать еще раз
+    </button>
   </ng-container>
 
   <form
@@ -39,5 +44,3 @@
     </div>
   </form>
 </aside>
-
-

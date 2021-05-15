@@ -27,7 +27,7 @@ export class ServicesPageComponent implements OnInit {
     {
       title: 'Ремонт ходовой',
       img: 'assets/services/services-chassis.jpeg'
-    },
+    }
   ]
   constructor() {}
 

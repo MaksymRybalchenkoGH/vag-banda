@@ -7,5 +7,3 @@ export const TG_CHAT_URL = `https://api.telegram.org/bot${TG_BOT_API_KEY}/sendMe
 export const GOOGLE_API_KEY = 'AIzaSyB7mSD4grd2xPs6_1OTfTmelxToZpDHW4c'
 export const GOOGLE_PLACE_ID = 'ChIJUVvaFdbN1EAR7jtHrQGZszQ'
 export const GOOGLE_REVIEWS_URL = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${GOOGLE_PLACE_ID}&key=${GOOGLE_API_KEY}`
-
-

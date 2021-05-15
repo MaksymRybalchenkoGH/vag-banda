@@ -1,4 +1,4 @@
-import {AppRoutes, AppRoutes as AppRoute} from './app-routes'
+import { AppRoutes, AppRoutes as AppRoute } from './app-routes'
 
 export const NavigationHeaderHeight = 64
 
@@ -7,7 +7,7 @@ export interface NavigationMenuItem {
   link: AppRoutes | string
 }
 
-export const  NavigationMenu: NavigationMenuItem[] = [
+export const NavigationMenu: NavigationMenuItem[] = [
   {
     innerHtml: 'Главная',
     link: AppRoute.home

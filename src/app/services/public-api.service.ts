@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs'
-import {GOOGLE_PLACE_ID, GOOGLE_REVIEWS_URL, TG_CHAT_URL} from '../constants/public-api'
-
-
+import { GOOGLE_PLACE_ID, GOOGLE_REVIEWS_URL, TG_CHAT_URL } from '../constants/public-api'
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +11,7 @@ export class PublicApiService {
   private readonly googleReviewsUrl = GOOGLE_REVIEWS_URL
   private readonly googlePlaceId = GOOGLE_PLACE_ID
 
-  constructor(private http: HttpClient
-  ) {
+  constructor(private http: HttpClient) {
     // console.log('gg', google)
   }
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import {AppRoutes} from './constants/app-routes'
+import { AppRoutes } from './constants/app-routes'
 
 @Component({
   selector: 'app-root',

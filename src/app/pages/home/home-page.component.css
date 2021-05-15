@@ -1,5 +1,5 @@
 .home-wrapper {
-  background: url("src/assets/img/home-template.jpeg") center;
+  background: url('src/assets/img/home-template.jpeg') center;
   background-size: cover;
   width: 100%;
 }
@@ -10,7 +10,7 @@
 }
 .shadow-background {
   background: #000000;
-  opacity: .7;
+  opacity: 0.7;
   position: absolute;
   top: 0;
   bottom: 0;

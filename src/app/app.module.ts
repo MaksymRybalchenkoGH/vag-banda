@@ -26,7 +26,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet'
 import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component'
 import { GoogleMapComponent } from './components/maps/google-map/google-map.component'
 import { GeoMapComponent } from './components/maps/geo-map/geo-map.component'
-import {GOOGLE_API_KEY} from './constants/public-api';
+import { GOOGLE_API_KEY } from './constants/public-api'
 import { FlipCardComponent } from './pages/services/flip-card/flip-card.component'
 
 @NgModule({

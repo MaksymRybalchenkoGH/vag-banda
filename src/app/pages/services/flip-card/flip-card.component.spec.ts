@@ -1,25 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { FlipCardComponent } from './flip-card.component';
+import { FlipCardComponent } from './flip-card.component'
 
 describe('FlipCardComponent', () => {
-  let component: FlipCardComponent;
-  let fixture: ComponentFixture<FlipCardComponent>;
+  let component: FlipCardComponent
+  let fixture: ComponentFixture<FlipCardComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FlipCardComponent ]
-    })
-    .compileComponents();
-  });
+      declarations: [FlipCardComponent]
+    }).compileComponents()
+  })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FlipCardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(FlipCardComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})

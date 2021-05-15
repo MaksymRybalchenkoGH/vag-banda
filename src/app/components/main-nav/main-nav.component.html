@@ -10,12 +10,13 @@
   >
     <h5 class="text-xl p-md">Меню</h5>
     <mat-nav-list>
-      <a *ngFor="let page of navigationMenu"
-         class="flex items-center p-md"
-         [routerLink]="['/']"
-         [fragment]="page.link"
-         [innerHTML]="page.innerHtml"
-         (click)="drawer.toggle()"
+      <a
+        *ngFor="let page of navigationMenu"
+        class="flex items-center p-md"
+        [routerLink]="['/']"
+        [fragment]="page.link"
+        [innerHTML]="page.innerHtml"
+        (click)="drawer.toggle()"
       ></a>
       <mat-list-item>
         <div class="flex justify-around w-full">
@@ -36,20 +37,20 @@
 
       <div class="flex mr-lg">
         <a [href]="geoLocationUrl" class="flex text-white text-sm mr-lg" target="_blank">
-            <span class="mr-md flex items-center">
-              <mat-icon class="text-icon" aria-label="map-location">location_on</mat-icon>
-            </span>
+          <span class="mr-md flex items-center">
+            <mat-icon class="text-icon" aria-label="map-location">location_on</mat-icon>
+          </span>
 
           <span class="flex flex-col" *ngIf="!(isHandset$ | async)">
-              <span>{{ geoLocationAddress }}</span>
-              <span>{{ geoLocationDistrict }}</span>
-            </span>
+            <span>{{ geoLocationAddress }}</span>
+            <span>{{ geoLocationDistrict }}</span>
+          </span>
         </a>
 
         <a href="tel:+380731104101" class="flex items-center text-white text-sm">
-            <span class="mr-md flex items-center">
-              <mat-icon class="text-icon" aria-label="phone call">call</mat-icon>
-            </span>
+          <span class="mr-md flex items-center">
+            <mat-icon class="text-icon" aria-label="phone call">call</mat-icon>
+          </span>
           <span *ngIf="!(isHandset$ | async)">+380731104101</span>
         </a>
       </div>
@@ -68,7 +69,6 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
     </mat-toolbar>
-
 
     <div [style.margin-top.px]="HeaderHeight"></div>
     <mat-toolbar *ngIf="!(isHandset$ | async)">
