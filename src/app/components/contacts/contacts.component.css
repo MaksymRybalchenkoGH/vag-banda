@@ -1,0 +1,34 @@
+.large-icon {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
+.contact-wrapper {
+  box-shadow: 0 3px 1px -3px #dbdbdb;
+  @apply pb-lg;
+}
+.contact-wrapper:last-child {
+  box-shadow: none;
+  @apply pb-0;
+  @apply pr-0;
+  @apply pt-lg;
+}
+
+@media only screen and (min-width: theme('screens.sm')) {
+  .contact-wrapper {
+    box-shadow: 3px 0 1px -3px #dbdbdb;
+    @apply pb-0;
+    /*@apply pr-lg;*/
+  }
+  .contact-wrapper:last-child {
+    box-shadow: none;
+    @apply pr-0;
+    @apply pt-0;
+    @apply pl-lg;
+  }
+  .large-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+}

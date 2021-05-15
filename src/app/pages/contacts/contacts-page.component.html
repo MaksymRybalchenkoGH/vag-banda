@@ -1,8 +1,8 @@
-<article class="m-lg">
-  <h1 class="text-primary text-center">Contacts goes here</h1>
-  <p class="text-lg">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet autem cum est id iste nostrum rerum, sed. Commodi
-    consectetur deserunt dicta dolore eaque esse minus quas quis saepe ullam?
-  </p>
+<article class="main-wrapper py-xl bg-indigo">
+  <h1 class="text-white text-center text-2xl font-bold mb-xl">Свяжитесь с нами</h1>
+  <div class="flex flex-col md:flex-row justify-between items-center">
+    <app-contacts [contacts]="contacts" [isLarge]="true" class="block mb-lg md:mb-0"></app-contacts>
+    <app-feedback-form class="feedback-form"></app-feedback-form>
+  </div>
 </article>
 <app-geo-map></app-geo-map>

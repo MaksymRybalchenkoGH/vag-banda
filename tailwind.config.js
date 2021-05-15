@@ -32,6 +32,9 @@ module.exports = {
           DEFAULT: '#668000',
           dark: '#385300',
         }
+      },
+      flex: {
+        '0': '0',
       }
     },
   },

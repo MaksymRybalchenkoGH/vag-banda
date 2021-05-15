@@ -20,7 +20,7 @@
       ></a>
       <mat-list-item>
         <div class="flex justify-around w-full mt-lg">
-          <a *ngFor="let soc of socials" [href]="soc.url" target="_blank" class="mr-md flex items-center last:mr-0">
+          <a *ngFor="let soc of contacts.socials" [href]="soc.url" target="_blank" class="mr-md flex items-center last:mr-0">
             <mat-icon [svgIcon]="soc.icon" aria-label="social link"></mat-icon>
           </a>
         </div>
@@ -28,7 +28,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary" role="heading" class="main-wrapper fixed-header" [style.height.px]="HeaderHeight">
+    <mat-toolbar color="primary" role="heading" class="main-wrapper fixed-header toolbar-header" [style.height.px]="HeaderHeight">
       <a [routerLink]="appRoutes.home" class="p-0">
         <img class="logo-img" src="/assets/img/vag-banda-tuning-workshop.png" alt="bndservice logo" />
       </a>
@@ -36,26 +36,26 @@
       <span style="flex: 1 1 auto"></span>
 
       <div class="flex mr-lg">
-        <a [href]="geoLocationUrl" class="flex text-white text-sm mr-lg" target="_blank">
+        <a [href]="contacts.locationUrl" class="flex text-white text-sm mr-lg" target="_blank">
           <span class="mr-md flex items-center">
             <mat-icon class="text-icon" aria-label="map-location">location_on</mat-icon>
           </span>
 
           <span class="flex flex-col" *ngIf="!(isHandset$ | async)">
-            <span>{{ geoLocationAddress }}</span>
-            <span>{{ geoLocationDistrict }}</span>
+            <span>{{ contacts.address }},</span>
+            <span>{{ contacts.district }}</span>
           </span>
         </a>
 
-        <a href="tel:+380731104101" class="flex items-center text-white text-sm">
+        <a [href]="'tel:' + contacts.phone" class="flex items-center text-white text-sm">
           <span class="mr-md flex items-center">
             <mat-icon class="text-icon" aria-label="phone call">call</mat-icon>
           </span>
-          <span *ngIf="!(isHandset$ | async)">+380731104101</span>
+          <span *ngIf="!(isHandset$ | async)">{{contacts.phone}}</span>
         </a>
       </div>
       <div class="flex" *ngIf="!(isHandset$ | async)">
-        <a *ngFor="let soc of socials" [href]="soc.url" target="_blank" class="mr-md flex items-center last:mr-0">
+        <a *ngFor="let soc of contacts.socials" [href]="soc.url" target="_blank" class="mr-md flex items-center last:mr-0">
           <mat-icon [svgIcon]="soc.icon" class="text-white" aria-label="social link"></mat-icon>
         </a>
       </div>

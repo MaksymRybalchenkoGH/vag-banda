@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { AppRoutes } from '../../constants/app-routes'
-import { Contacts } from '../../constants/contacts'
+import { MainContacts } from '../../constants/contacts'
 
 @Component({
   selector: 'app-footer',
@@ -9,5 +9,5 @@ import { Contacts } from '../../constants/contacts'
 })
 export class FooterComponent {
   public readonly appRoutes = AppRoutes
-  public readonly contacts = Contacts
+  public readonly contacts = MainContacts
 }
