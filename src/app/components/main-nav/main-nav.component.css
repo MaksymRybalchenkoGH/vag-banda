@@ -12,9 +12,12 @@
   z-index: 1;
   height: auto;
 }
+.mat-nav-list a {
+  box-shadow: 0 1px 3px 0 #3333331a;
+}
 /* custom */
 .logo-img {
-  height: 64px;
+  height: 50px;
   width: auto;
 }
 
