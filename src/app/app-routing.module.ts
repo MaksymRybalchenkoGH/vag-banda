@@ -6,6 +6,8 @@ import { AboutPageComponent } from './pages/about/about-page.component'
 import { ServicesPageComponent } from './pages/services/services-page.component'
 import { ContactsPageComponent } from './pages/contacts/contacts-page.component'
 import { NavigationHeaderHeight } from './constants/navigation-menu'
+import {CarsPageComponent} from './pages/cars/cars-page.component'
+import {AllowedCarBrandsGuard} from './guards/allowed-car-brands.guard'
 
 const routes: Routes = [
   {
@@ -35,8 +37,22 @@ const routes: Routes = [
       {
         path: AppRoutes.contacts,
         component: ContactsPageComponent
+      },
+      {
+        path: AppRoutes.cars,
+        children: [
+          {
+            path: ':carBrand',
+            component: CarsPageComponent,
+            canActivate: [AllowedCarBrandsGuard],
+          }
+        ]
       }
     ]
+  },
+  {
+    path: '**',
+    redirectTo: AppRoutes.home
   }
 ]
 

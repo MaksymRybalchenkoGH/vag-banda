@@ -28,7 +28,9 @@ import { GoogleMapComponent } from './components/maps/google-map/google-map.comp
 import { GeoMapComponent } from './components/maps/geo-map/geo-map.component'
 import { GOOGLE_API_KEY } from './constants/public-api'
 import { FlipCardComponent } from './pages/services/flip-card/flip-card.component';
-import { ContactsComponent } from './components/contacts/contacts.component'
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { CarsPageComponent } from './pages/cars/cars-page.component';
+import { CompanyTitleBlockComponent } from './components/company-title-block/company-title-block.component'
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { ContactsComponent } from './components/contacts/contacts.component'
     GoogleMapComponent,
     GeoMapComponent,
     FlipCardComponent,
-    ContactsComponent
+    ContactsComponent,
+    CarsPageComponent,
+    CompanyTitleBlockComponent
   ],
   imports: [
     BrowserModule,

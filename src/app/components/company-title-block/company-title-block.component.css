@@ -1,0 +1,21 @@
+.home-wrapper {
+  background: url('src/assets/img/home-template.jpeg') center;
+  background-size: cover;
+  width: 100%;
+}
+.title-border {
+  @apply border-green;
+  @apply rounded-sm;
+  @apply py-md;
+}
+.shadow-background {
+  background: #000000;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,19 +1,5 @@
-<article class="main-wrapper home-wrapper relative md:py-lg">
-  <div class="shadow-background"></div>
-  <div class="relative flex flex-col md:flex-row md:justify-between items-center md:items-center py-md md:py-xl">
-    <div class="flex-auto flex justify-center md:mr-xl">
-      <div class="mb-xl md:mb-0 mr-0 font-bold text-white text-center max-w-2xl">
-        <h1 class="text-2xl sm:text-3xl lg:text-4xl mb-md border-2 md:border-4 title-border">BANDA Service</h1>
-        <h2 class="text-1xl sm:text-2xl lg:text-3xl">
-          профессиональная диагностика, техническое обслуживание и ремонт автомобилей
-        </h2>
-      </div>
-    </div>
-    <div class="w-full" [style.maxWidth.px]="400">
-      <app-feedback-form class="opacity-95 block"></app-feedback-form>
-    </div>
-  </div>
-</article>
+<app-company-title-block></app-company-title-block>
+
 <div [attr.id]="appRoutes.services">
   <app-services-page></app-services-page>
 </div>
