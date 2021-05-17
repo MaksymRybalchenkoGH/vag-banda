@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { AppRoutes } from '../../constants/app-routes'
-import { MainContacts } from '../../constants/contacts'
+import { MainContacts } from '../../data/contacts'
 
 @Component({
   selector: 'app-footer',

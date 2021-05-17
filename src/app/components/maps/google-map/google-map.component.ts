@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./google-map.component.css']
 })
 export class GoogleMapComponent implements OnInit {
-  readonly coordinates = {
-    lat: 50.4174641,
-    lng: 30.3702586
+  public readonly coordinates = {
+    lat: 50.4074537,
+    lng: 30.3777295
   }
+  public readonly zoom = 15
 
   constructor() {}
 
