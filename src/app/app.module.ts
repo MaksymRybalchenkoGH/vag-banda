@@ -30,7 +30,8 @@ import { GOOGLE_API_KEY } from './constants/public-api'
 import { FlipCardComponent } from './pages/services/flip-card/flip-card.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { CarsPageComponent } from './pages/cars/cars-page.component';
-import { CompanyTitleBlockComponent } from './components/company-title-block/company-title-block.component'
+import { CompanyTitleBlockComponent } from './components/company-title-block/company-title-block.component';
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component'
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { CompanyTitleBlockComponent } from './components/company-title-block/com
     FlipCardComponent,
     ContactsComponent,
     CarsPageComponent,
-    CompanyTitleBlockComponent
+    CompanyTitleBlockComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,
