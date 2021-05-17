@@ -10,7 +10,7 @@
 .shadow-overlay {
   @apply bg-indigo-dark;
   opacity: 0.8;
-
+  transition: all .3s;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -18,17 +18,11 @@
   right: 0;
   z-index: 0;
 }
-.hover-overlay {
+
+.shadow-overlay:hover {
   @apply bg-green-light;
-  opacity: 0.85;
-
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
 }
+
 @media only screen and (min-width: theme('screens.md')) {
   .block-wrapper {
     background: url('src/assets/img/services-template.jpeg') right center no-repeat;

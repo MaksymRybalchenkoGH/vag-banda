@@ -13,15 +13,15 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: AppRoutes.main,
+        redirectTo: AppRoutes.home,
         pathMatch: 'full'
       },
       {
-        path: AppRoutes.main,
+        path: AppRoutes.home,
         component: HomePageComponent
       },
       {
-        path: AppRoutes.home,
+        path: AppRoutes.main,
         component: HomePageComponent
       },
       {

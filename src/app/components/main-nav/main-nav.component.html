@@ -12,7 +12,7 @@
     <mat-nav-list>
       <a
         *ngFor="let page of navigationMenu"
-        class="flex items-center p-lg flex justify-center text-xl"
+        class="flex items-center p-lg flex justify-center text-xl menu-button"
         [routerLink]="['/']"
         [fragment]="page.link"
         [innerHTML]="page.innerHtml"
@@ -30,7 +30,7 @@
   <mat-sidenav-content>
     <mat-toolbar color="primary" role="heading" class="main-wrapper fixed-header toolbar-header" [style.height.px]="HeaderHeight">
       <a [routerLink]="appRoutes.home" class="p-0">
-        <img class="logo-img" src="/assets/img/vag-banda-tuning-workshop.png" alt="bndservice logo" />
+        <img class="logo-img" src="../../../assets/img/banda-tuning-workshop.png" alt="bndservice logo" />
       </a>
 
       <span style="flex: 1 1 auto"></span>
@@ -77,7 +77,7 @@
           *ngFor="let page of navigationMenu"
           mat-button
           color="primary"
-          class="font-bold text-lg menu-item"
+          class="font-bold text-lg menu-button"
           [routerLink]="'/'"
           [fragment]="page.link"
           [innerHTML]="page.innerHtml"

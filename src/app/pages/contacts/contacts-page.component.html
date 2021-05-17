@@ -1,7 +1,9 @@
 <article class="main-wrapper py-xl bg-indigo">
-  <h1 class="text-white text-center text-2xl font-bold mb-xl">Свяжитесь с нами</h1>
   <div class="flex flex-col md:flex-row justify-between items-center">
-    <app-contacts [contacts]="contacts" [isLarge]="true" class="block mb-lg md:mb-0"></app-contacts>
+    <div>
+      <h1 class="text-white text-center text-2xl font-bold mb-lg md:mb-xl">Свяжитесь с нами</h1>
+      <app-contacts [contacts]="contacts" [isLarge]="true" class="block mb-lg md:mb-0"></app-contacts>
+    </div>
     <app-feedback-form class="feedback-form"></app-feedback-form>
   </div>
 </article>
