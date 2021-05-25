@@ -14,7 +14,7 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list'
 import { HomePageComponent } from './pages/home/home-page.component'
 import { AboutPageComponent } from './pages/about/about-page.component'
-import { ServicesPageComponent } from './pages/services/services-page.component'
+import { CategoriesPageComponent } from './pages/categories/categories-page.component'
 import { MatCardModule } from '@angular/material/card'
 import { HttpClientModule } from '@angular/common/http'
 import { MatInputModule } from '@angular/material/input'
@@ -27,11 +27,12 @@ import { FeedbackFormComponent } from './components/feedback-form/feedback-form.
 import { GoogleMapComponent } from './components/maps/google-map/google-map.component'
 import { GeoMapComponent } from './components/maps/geo-map/geo-map.component'
 import { GOOGLE_API_KEY } from './constants/public-api'
-import { FlipCardComponent } from './pages/services/flip-card/flip-card.component';
+import { FlipCardComponent } from './pages/categories/flip-card/flip-card.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { CarsPageComponent } from './pages/cars/cars-page.component';
 import { CompanyTitleBlockComponent } from './components/company-title-block/company-title-block.component';
-import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component'
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
+import { ServicesPageComponent } from './pages/services/services-page.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
     MainNavComponent,
     HomePageComponent,
     AboutPageComponent,
-    ServicesPageComponent,
+    CategoriesPageComponent,
     ContactsPageComponent,
     FooterComponent,
     LeafletMapComponent,
@@ -50,7 +51,8 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
     ContactsComponent,
     CarsPageComponent,
     CompanyTitleBlockComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    ServicesPageComponent
   ],
   imports: [
     BrowserModule,

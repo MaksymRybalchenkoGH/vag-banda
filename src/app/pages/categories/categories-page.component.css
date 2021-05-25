@@ -1,0 +1,47 @@
+.block-wrapper {
+  background: none;
+  min-height: 333px;
+}
+.service-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.shadow-overlay {
+  @apply bg-indigo-dark;
+  opacity: 0.8;
+  transition: all .3s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.shadow-overlay:hover {
+  @apply bg-green-light;
+}
+
+@media only screen and (min-width: theme('screens.md')) {
+  .block-wrapper {
+    background: url('src/assets/img/services-template.jpeg') right center no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (min-width: theme('screens.lg')) {
+  .block-wrapper {
+    background-size: 80%;
+  }
+}
+@media only screen and (min-width: theme('screens.xl')) {
+  .block-wrapper {
+    background-size: 60%;
+  }
+}
+@media only screen and (min-width: theme('screens.2xl')) {
+  .block-wrapper {
+    background-size: 47%;
+  }
+}
