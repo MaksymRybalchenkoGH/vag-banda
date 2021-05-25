@@ -21,7 +21,7 @@
               "path": "webpack.config.js"
             },
             "tsConfig": "src/tsconfig.app.json",
-            "assets": ["src/favicon-temp.ico", "src/assets"],
+            "assets": ["src/fav-banda.ico", "src/assets"],
             "styles": [
               "./node_modules/leaflet/dist/leaflet.css",
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
@@ -90,7 +90,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "assets": ["src/favicon-temp.ico", "src/assets"]
+            "assets": ["src/fav-banda.ico", "src/assets"]
           }
         },
         "lint": {

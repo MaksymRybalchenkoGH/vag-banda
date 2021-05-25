@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import {TuningWorkshopCoordinates} from '../../../data/contacts'
 
 @Component({
   selector: 'app-google-map',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core'
 })
 export class GoogleMapComponent implements OnInit {
   public readonly coordinates = {
-    lat: 50.4074537,
-    lng: 30.3777295
+    lat: TuningWorkshopCoordinates.lat,
+    lng: TuningWorkshopCoordinates.lng
   }
-  public readonly zoom = 15
+  public readonly zoom = 17
 
   constructor() {}
 

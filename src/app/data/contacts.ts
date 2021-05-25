@@ -6,6 +6,11 @@ const VagDistrict = 'Киев'
 const VagMapUrl = 'https://www.google.com/maps/place/%D0%A1%D0%A2%D0%9E+VAG+Banda/@50.4850592,30.396161,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cdd615da5b51:0x34b39901ad473bee!8m2!3d50.4850654!4d30.3983637'
 
 
+export const TuningWorkshopCoordinates = {
+  lat: 50.409212,
+  lng: 30.380463
+}
+
 
 export interface SocialNetModal {
   icon: string
