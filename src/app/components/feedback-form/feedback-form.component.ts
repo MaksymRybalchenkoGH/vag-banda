@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core'
+import {Component, Input, OnDestroy, OnInit} from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { PublicApiService } from '../../services/public-api.service'
 import { BehaviorSubject, Observable, Subject } from 'rxjs'
@@ -11,6 +11,7 @@ import { FeedbackMessageState } from '../../models/feedback-message-state'
   styleUrls: ['./feedback-form.component.css']
 })
 export class FeedbackFormComponent implements OnInit, OnDestroy {
+  @Input() outline = false
   private feedbackMessage: BehaviorSubject<string> = new BehaviorSubject<string>('')
   private feedbackMessage$: Observable<string> = this.feedbackMessage.asObservable()
 
