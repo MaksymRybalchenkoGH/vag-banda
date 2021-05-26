@@ -25,7 +25,7 @@ export const NavigationMenu: NavigationMenuItem[] = [
     link: AppRoute.contacts
   },
   {
-    innerHtml: `<img width="66" src="assets/img/banda-tuning-workshop-color.png" alt="bndservice logo" />`,
+    innerHtml: `<img width="66" src="assets/img/720-color.png" alt="bndservice logo" />`,
     link: AppRoute.banda
   }
 ]

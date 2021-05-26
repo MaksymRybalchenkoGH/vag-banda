@@ -1,5 +1,5 @@
 const TuningWorkshopAddress = 'ул.Киевская\u00A08а'
-const TuningWorkshopDistrict = 'Софиеская\u00A0борщаговка'
+const TuningWorkshopDistrict = 'Софиеская\u00A0Борщаговка'
 const TuningWorkshopMapUrl = 'https://www.google.com/maps/place/Banda+Car+Service/@50.4089658,30.37802,17z/data=!4m13!1m7!3m6!1s0x40d4cbc156d850eb:0x8fe944006c80de24!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgOCwg0JrQuNC10LIsIDA4MTMx!3b1!8m2!3d50.409666!4d30.381059!3m4!1s0x40d4cb4eef11baa3:0x14bfe1fa124a0fdf!8m2!3d50.4089658!4d30.380214'
 const VagAddress = 'ул.\u00A0Стеценка\u00A019/91'
 const VagDistrict = 'Киев'
