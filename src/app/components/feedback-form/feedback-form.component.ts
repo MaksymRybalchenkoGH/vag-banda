@@ -16,7 +16,7 @@ export class FeedbackFormComponent implements OnInit, OnDestroy {
 
   private readonly successMessageTemplate = 'Спасибо! Ваша заявка оформлена, в ближайшее время свями свяжется мастер.'
   private readonly errorMessageTemplate = 'Что-то пошло не так. Пожалуйста, повторите попытку ещё раз.'
-  private readonly initMessageTemplate = 'Оствьте заявку'
+  private readonly initMessageTemplate = 'Оставьте заявку'
   private readonly defaultStatusMessage: FeedbackMessageState = {
     done: false,
     success: false,
