@@ -31,7 +31,7 @@ export const MainContacts: ContactModel = {
   district: TuningWorkshopDistrict,
   locationUrl: TuningWorkshopMapUrl,
   mail: 'st.ivan.al@gmail.com',
-  phone: '+38 073 110 41 01',
+  phone: '+38 073 470 70 75',
   socials: [
     {
       icon: 'facebook',
