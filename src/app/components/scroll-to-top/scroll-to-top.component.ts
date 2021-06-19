@@ -27,7 +27,11 @@ export class ScrollToTopComponent implements OnInit {
     }
   }
   scrollToTop() {
-    this.scroll.scrollToPosition([0, 0])
+    (this.document.getElementsByTagName('html')?.[0]).style.scrollBehavior = 'smooth'
+    setTimeout(() => {
+      this.scroll.scrollToPosition([0, 0]);
+      (this.document.getElementsByTagName('html')?.[0]).style.scrollBehavior = 'auto'
+    }, 100)
   }
   ngOnInit() {}
 }

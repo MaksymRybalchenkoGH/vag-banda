@@ -6,10 +6,10 @@ import { AboutPageComponent } from './pages/about/about-page.component'
 import { CategoriesPageComponent } from './pages/categories/categories-page.component'
 import { ContactsPageComponent } from './pages/contacts/contacts-page.component'
 import { NavigationHeaderHeight } from './constants/navigation-menu'
-import {CarsPageComponent} from './pages/cars/cars-page.component'
-import {AllowedCarBrandsGuard} from './guards/allowed-car-brands.guard'
-import {ServicesPageComponent} from './pages/services/services-page.component'
-import {AllowedCategoriesGuard} from './guards/allowed-category.guard'
+import { CarsPageComponent } from './pages/cars/cars-page.component'
+import { AllowedCarBrandsGuard } from './guards/allowed-car-brands.guard'
+import { ServicesPageComponent } from './pages/services/services-page.component'
+import { AllowedCategoriesGuard } from './guards/allowed-category.guard'
 
 const routes: Routes = [
   {
@@ -46,7 +46,7 @@ const routes: Routes = [
           {
             path: ':carBrand',
             component: CarsPageComponent,
-            canActivate: [AllowedCarBrandsGuard],
+            canActivate: [AllowedCarBrandsGuard]
           }
         ]
       },
@@ -56,7 +56,7 @@ const routes: Routes = [
           {
             path: ':categoryId',
             component: ServicesPageComponent,
-            canActivate: [AllowedCategoriesGuard],
+            canActivate: [AllowedCategoriesGuard]
           }
         ]
       }
@@ -69,7 +69,13 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', scrollOffset: [0, NavigationHeaderHeight] })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      anchorScrolling: 'enabled',
+      scrollOffset: [0, NavigationHeaderHeight],
+      scrollPositionRestoration: 'top'
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
