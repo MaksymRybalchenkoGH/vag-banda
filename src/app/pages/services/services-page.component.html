@@ -14,6 +14,9 @@
         <p class="text-lg text-gray-500 mb-md">
           {{category.description.main}}
         </p>
+        <ul *ngIf="category.description.details?.length">
+          <li *ngFor="let detail of category.description.details"> {{detail}}</li>
+        </ul>
       </div>
     </div>
     <app-feedback-form [outline]="true"></app-feedback-form>

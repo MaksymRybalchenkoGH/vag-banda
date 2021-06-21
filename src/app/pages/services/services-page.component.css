@@ -2,3 +2,11 @@ img {
   width: 100%;
   max-width: 600px;
 }
+ul {
+  @apply ml-xl;
+  @apply text-gray-500;
+
+}
+li {
+  list-style: square outside;
+}
