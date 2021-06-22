@@ -93,6 +93,7 @@
           mat-button
           color="primary"
           class="font-bold text-lg menu-button"
+          (click)="smoothScroll()"
           [routerLink]="'/'"
           [fragment]="page.link"
           [innerHTML]="page.innerHtml"

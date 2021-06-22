@@ -1,5 +1,6 @@
 import { Component, HostListener, Inject, OnInit } from '@angular/core'
 import { DOCUMENT, ViewportScroller } from '@angular/common'
+import {ScrollService} from '../../services/scroll.service'
 
 @Component({
   selector: 'app-scroll-to-top',
@@ -9,7 +10,7 @@ import { DOCUMENT, ViewportScroller } from '@angular/common'
 export class ScrollToTopComponent implements OnInit {
   private readonly appearanceThreshold = 100
   windowScrolled: boolean
-  constructor(@Inject(DOCUMENT) private document: Document, private scroll: ViewportScroller) {}
+  constructor(@Inject(DOCUMENT) private document: Document, private scrollService: ScrollService) {}
   @HostListener('window:scroll', []) onWindowScroll() {
     if (
       this.document.defaultView.pageYOffset > this.appearanceThreshold ||
@@ -27,11 +28,7 @@ export class ScrollToTopComponent implements OnInit {
     }
   }
   scrollToTop() {
-    (this.document.getElementsByTagName('html')?.[0]).style.scrollBehavior = 'smooth'
-    setTimeout(() => {
-      this.scroll.scrollToPosition([0, 0]);
-      (this.document.getElementsByTagName('html')?.[0]).style.scrollBehavior = 'auto'
-    }, 100)
+   this.scrollService.scrollTo([0, 0])
   }
   ngOnInit() {}
 }

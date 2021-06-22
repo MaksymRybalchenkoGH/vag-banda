@@ -1,11 +1,10 @@
 import { Component } from '@angular/core'
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
 import { Observable } from 'rxjs'
-import { map, shareReplay, take } from 'rxjs/operators'
 import { AppRoutes } from '../../constants/app-routes'
 import { NavigationHeaderHeight, NavigationMenu } from '../../constants/navigation-menu'
 import { MainContacts } from '../../data/contacts'
 import { IsMobileService } from '../../services/is-mobile.service'
+import {ScrollService} from '../../services/scroll.service'
 
 @Component({
   selector: 'app-main-nav',
@@ -20,7 +19,10 @@ export class MainNavComponent {
 
   public isHandset$: Observable<boolean>
 
-  constructor(private isMobileService: IsMobileService) {
+  constructor(private isMobileService: IsMobileService, private scrollService: ScrollService) {
     this.isHandset$ = this.isMobileService.isHandset$()
+  }
+  public smoothScroll() {
+    this.scrollService.scrollTo()
   }
 }
