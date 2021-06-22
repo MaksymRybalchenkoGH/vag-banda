@@ -20,7 +20,12 @@
       ></a>
       <mat-list-item>
         <div class="flex justify-around w-full mt-lg">
-          <a *ngFor="let soc of contacts.socials" [href]="soc.url" target="_blank" class="mr-md flex items-center last:mr-0">
+          <a
+            *ngFor="let soc of contacts.socials"
+            [href]="soc.url"
+            target="_blank"
+            class="mr-md flex items-center last:mr-0"
+          >
             <mat-icon [svgIcon]="soc.icon" aria-label="social link"></mat-icon>
           </a>
         </div>
@@ -28,7 +33,12 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary" role="heading" class="main-wrapper fixed-header toolbar-header" [style.height.px]="HeaderHeight">
+    <mat-toolbar
+      color="primary"
+      role="heading"
+      class="main-wrapper fixed-header toolbar-header"
+      [style.height.px]="HeaderHeight"
+    >
       <a [routerLink]="appRoutes.home" class="p-0">
         <img class="logo-img" src="../../../assets/img/main-logo.png" alt="bndservice logo" />
       </a>
@@ -51,11 +61,16 @@
           <span class="mr-md flex items-center">
             <mat-icon class="text-icon" aria-label="phone call">call</mat-icon>
           </span>
-          <span *ngIf="!(isHandset$ | async)">{{contacts.phone}}</span>
+          <span *ngIf="!(isHandset$ | async)">{{ contacts.phone }}</span>
         </a>
       </div>
       <div class="flex" *ngIf="!(isHandset$ | async)">
-        <a *ngFor="let soc of contacts.socials" [href]="soc.url" target="_blank" class="mr-md flex items-center last:mr-0">
+        <a
+          *ngFor="let soc of contacts.socials"
+          [href]="soc.url"
+          target="_blank"
+          class="mr-md flex items-center last:mr-0"
+        >
           <mat-icon [svgIcon]="soc.icon" class="text-white" aria-label="social link"></mat-icon>
         </a>
       </div>

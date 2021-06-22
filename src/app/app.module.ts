@@ -27,11 +27,11 @@ import { FeedbackFormComponent } from './components/feedback-form/feedback-form.
 import { GoogleMapComponent } from './components/maps/google-map/google-map.component'
 import { GeoMapComponent } from './components/maps/geo-map/geo-map.component'
 import { GOOGLE_API_KEY } from './constants/public-api'
-import { FlipCardComponent } from './pages/categories/flip-card/flip-card.component';
-import { ContactsComponent } from './components/contacts/contacts.component';
-import { CarsPageComponent } from './pages/cars/cars-page.component';
-import { CompanyTitleBlockComponent } from './components/company-title-block/company-title-block.component';
-import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
+import { FlipCardComponent } from './pages/categories/flip-card/flip-card.component'
+import { ContactsComponent } from './components/contacts/contacts.component'
+import { CarsPageComponent } from './pages/cars/cars-page.component'
+import { CompanyTitleBlockComponent } from './components/company-title-block/company-title-block.component'
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component'
 import { ServicesPageComponent } from './pages/services/services-page.component'
 
 @NgModule({

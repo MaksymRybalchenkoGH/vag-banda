@@ -1,25 +1,16 @@
-<article *ngIf="category" class="main-wrapper md:flex-row justify-between items-center py-xl">
-
-  <div class="flex items-center justify-center mb-lg md:mb-xl">
-    <img [src]="'assets/categories/' + category.mainImage + '.jpg'" alt="">
+<article *ngIf="category" class="md:flex-row justify-between items-center pb-xl">
+  <div class="mb-lg md:mb-xl">
+    <div class="image" [style.background-image]="'url(assets/categories/' + category.mainImage + '.jpg)'"></div>
   </div>
 
-
-  <div class="flex flex-col md:flex-row md:justify-between">
-    <div class="mr-0 md:mr-lg">
-      <h1 class="mb-lg text-2xl md:text-3xl text-primary">
-        {{category.title}}
-      </h1>
-      <div>
-        <p class="text-lg text-gray-500 mb-md">
-          {{category.description.main}}
-        </p>
-        <ul *ngIf="category.description.details?.length">
-          <li *ngFor="let detail of category.description.details"> {{detail}}</li>
-        </ul>
-      </div>
-    </div>
-    <app-feedback-form [outline]="true"></app-feedback-form>
+  <div class="main-wrapper flex flex-col md:flex-row md:justify-between">
+    <div class="mr-0 md:mr-lg text-lg text-gray-500 mb-md" [innerHTML]="category.description.main"></div>
+    <app-feedback-form [outline]="true" class="feedback-form"></app-feedback-form>
   </div>
-
+  <div class="flex justify-center ites-center" *ngIf="!(isHandset$ | async)">
+    <h4 class="text-center text-2xl">
+      <a [routerLink]="'/' + AppRoutes.contacts" class="text-accent font-bold">Оставьте заявку</a><br />и получите
+      консультацию специалиста бесплатно!
+    </h4>
+  </div>
 </article>
