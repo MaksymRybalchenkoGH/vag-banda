@@ -11,6 +11,7 @@
 import {DiagnosticsDescription} from './category-description/diagnostics'
 import {TirDescription} from './category-description/tir'
 import {ChassisDescription} from './category-description/chassis'
+import {EngineDescription} from './category-description/engine'
 
 export enum CategoryEnum {
   diagnostics = 'diagnostics',
@@ -107,8 +108,7 @@ export const Categories: Category[] = [
     id: CategoryEnum.engine,
     title: 'Ремонт двигателя',
     description: {
-      main:
-        'Двигатель – один из важнейших узлов автомобиля. Диагностика двигателя необходима, если вы заметили какие-либо неполадки в его работе. Это можно определить по следующим признакам',
+      main: EngineDescription,
       additional:
         'Очень часто диагностику необходимо проводить со вскрытием крышки головки блока цилиндров. Здесь без профессионалов не обойтись. Добиться качественного ремонта можно только при использовании точного оборудования, правильных технических карт и умелых рук. В автосервисе Banda Service работают мотористы с огромным опытом, которые перебрали и откапиталили не один двигатель.',
       details: [
