@@ -57,11 +57,18 @@
           </span>
         </a>
 
-        <a [href]="'tel:' + contacts.phone" class="flex items-center text-white text-sm">
+        <a [href]="'tel:' + contacts.phone" class="flex items-center text-white text-sm mr-lg">
           <span class="mr-md flex items-center">
             <mat-icon class="text-icon" aria-label="phone call">call</mat-icon>
           </span>
           <span *ngIf="!(isHandset$ | async)">{{ contacts.phone }}</span>
+        </a>
+
+        <a [href]="contacts.telegram" class="flex items-center text-white text-sm mr-md" target="_blank">
+          <span class="mr-md flex items-center">
+            <mat-icon class="text-icon" aria-label="telegram" svgIcon="telegram"></mat-icon>
+          </span>
+          <span *ngIf="!(isHandset$ | async)">Написать в телеграм</span>
         </a>
       </div>
       <div class="flex" *ngIf="!(isHandset$ | async)">
@@ -81,7 +88,7 @@
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async"
       >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon class="text-icon" aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
     </mat-toolbar>
 
