@@ -14,11 +14,11 @@
       <span>{{contact.phone}}</span>
     </a>
 
-    <a [href]="'mailto:' + contact.mail" class="flex items-center text-white text-sm" [class.sm:text-lg]="isLarge">
+    <a [href]="contact.telegram" class="flex items-center text-white text-sm" [class.sm:text-lg]="isLarge" target="_blank">
       <span class="mr-md flex items-center">
-        <mat-icon [class.large-icon]="isLarge" class="text-icon" aria-label="send e-mail">mail</mat-icon>
+        <mat-icon [class.large-icon]="isLarge" class="text-icon" aria-label="telegram" svgIcon="telegram"></mat-icon>
       </span>
-      <span>{{ contact.mail }}</span>
+      <span>Написать в телеграм</span>
     </a>
   </div>
 </div>
