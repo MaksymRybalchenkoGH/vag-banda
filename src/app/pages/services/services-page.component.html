@@ -7,7 +7,7 @@
     <div class="mr-0 md:mr-lg text-lg text-gray-500 mb-md" [innerHTML]="category.description.main"></div>
     <app-feedback-form [outline]="true" class="feedback-form"></app-feedback-form>
   </div>
-  <div class="flex justify-center ites-center" *ngIf="!(isHandset$ | async)">
+  <div class="flex justify-center items-center mt-xl" *ngIf="!(isHandset$ | async)">
     <h4 class="text-center text-2xl">
       <a [routerLink]="'/' + AppRoutes.contacts" class="text-accent font-bold">Оставьте заявку</a><br />и получите
       консультацию специалиста бесплатно!
