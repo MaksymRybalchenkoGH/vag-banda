@@ -7,8 +7,8 @@ const VagMapUrl = 'https://www.google.com/maps/place/%D0%A1%D0%A2%D0%9E+VAG+Band
 
 
 export const TuningWorkshopCoordinates = {
-  lat: 50.409212,
-  lng: 30.380463
+  lat: 50.408895,
+  lng: 30.380047
 }
 
 
