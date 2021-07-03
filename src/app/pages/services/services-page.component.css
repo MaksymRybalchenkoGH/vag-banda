@@ -25,9 +25,6 @@ ol {
   margin-inline-end: 0;
   padding-inline-start: 40px;
 }
-li {
-  /*list-style: initial;*/
-}
 h1 {
   @apply mb-lg;
   @apply font-bold;
@@ -40,5 +37,5 @@ h2 {
 }
 
 .feedback-form {
-  flex: 0 0 340px;
+  flex: 0 0 400px;
 }
