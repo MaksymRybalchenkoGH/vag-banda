@@ -33,7 +33,7 @@ export const MainContacts: ContactModel = {
   locationUrl: BandaMapUrl,
   mail: 'st.ivan.al@gmail.com',
   phone: '+38 073 470 70 75',
-  telegram: 'https://telegram.me/+380734707075',
+  telegram: 'https://telegram.me/banda_service',
   socials: [
     {
       icon: 'facebook',
@@ -54,7 +54,7 @@ export const ContactsList: ContactModel[] = [
     locationUrl: VagMapUrl,
     mail: 'pochta.ot.vaga@gmail.com',
     phone: '+38 050 470 70 75', // '+38 098 470 70 75',
-    telegram: 'https://telegram.me/+380504707075',
+    telegram: 'https://telegram.me/banda_service',
     socials: [
       {
         icon: 'facebook',
