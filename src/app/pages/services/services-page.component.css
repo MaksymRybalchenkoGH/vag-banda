@@ -39,3 +39,8 @@ h2 {
 .feedback-form {
   flex: 0 0 400px;
 }
+.sticky-form {
+  position: fixed;
+  top: 104px;
+  width: 400px;
+}
